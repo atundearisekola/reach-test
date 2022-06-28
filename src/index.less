@@ -1,0 +1,169 @@
+// @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+
+@rhino: #323b40;
+@rhinoMid: #575556;
+@teal: #0096a1;
+@tealMid: #0ebac7;
+@red: #fc625c;
+@amber: #fdbc40;
+@green: #34c748;
+@offWhite: #e9eaea;
+@tracker: #cbcb06;
+
+h3{
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: @rhinoMid;
+}
+
+div.browser {
+  background: #fff url(http://www.s4c.cymru/temp/unsplash-kitsune-4.jpg) no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 4px 8px -4px rgba(0,0,0,0.4), 0 12px 24px -6px rgba(0,0,0,0.4), 0 24px 64px 12px rgba(0,0,0,0.25);
+  color: @rhino;
+  font-family: 'Source Sans Pro', helvetica;
+  overflow: hidden;
+  letter-spacing: -0.05em;
+  margin: 5% auto;
+  max-width: 1200px;
+  min-width: 320px;
+  min-height: 900px;
+  padding-bottom: 10%;
+  position: relative;
+  width: 90%;
+  div.chrome {
+    background: @rhinoMid;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    > a {
+      border-radius: 12px;
+      display: block;
+      float: left;
+      height: 12px;
+      margin: 13px 4px;
+      width: 12px;
+      &:first-child {
+        margin-left: 13px;
+      }
+      &.red {
+        background: @red;
+      }
+      &.amber {
+        background: @amber;
+      }
+      &.green {
+        background: @green;
+      }
+    }
+    div.url {
+      background: #5f676d;
+      border-radius: 4px;
+      height: 24px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      top: 8px;
+      width: 70%;
+    }
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: 200;
+    margin: 0;
+    padding: 80px 40px 10px;
+  }
+  h2 {
+    font-size: 48px;
+    line-height: 1em;
+    max-width: 16em;
+    margin: 0;
+    padding: 0 40px;
+  }
+  section.screen {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+
+  }
+}
+
+div.frame{
+  margin-top: 1rem;
+  border: 5px dashed @rhinoMid;
+  border-radius: 1em;
+  padding: 0.5rem;
+
+  .legend{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: @rhinoMid;
+    
+  }
+  .frame-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .frame-data{
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+      flex-direction: column;
+
+      .color-box{
+        width: 100px;
+        height: 50px;
+        background-color: #f58e81;
+        border-radius: 10px;
+      }
+      .text{
+       
+        font-size: 1rem;
+        font-weight: 500;
+        color: @rhinoMid;
+        margin: 0.4rem;
+        
+      }
+      
+    }
+    .frame-detail{
+     
+      margin-left: 1rem;
+      .text{
+       
+        font-size: 1rem;
+        font-weight: 500;
+        color: @rhinoMid;
+        margin: 0.4rem;
+        text-align: right;
+        
+      }
+    }
+  }
+
+}
+
+span.tracker {
+ display: block;
+  position: absolute;
+  top: 400px;
+  left: 420px;
+  border: solid 0.35rem @tracker;
+  border-radius: 5px;
+  width: 6rem; 
+  height: 7.5rem; 
+  z-index: 100000;
+  
+}
+

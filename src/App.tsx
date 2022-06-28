@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import {DeviceHeader} from './components/DeviceHeader';
+import {DevicePage} from './components/DevicePage';
+import {useDeviceContext} from './context/constext';
 
-function App() {
+export const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
+
+export const App: React.FC = () => {
+
+  /**
+   * Define useDeviceContext custom hooks
+   */
+
+  const {fetchDeviceIDs, deviceIds = []} = useDeviceContext()
+
+  /**
+   * Define effect to fetch list of devices
+   */
+    React.useEffect(() => {
+    
+      fetchDeviceIDs()
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
+    <AppContainer className='App'>
+      {/* <DeviceHeader/> */}
+      <DevicePage devices={deviceIds}/>
+    </AppContainer>
+   
   );
-}
-
-export default App;
+};
