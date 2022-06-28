@@ -65,7 +65,7 @@ const InitialState: DeviceInitialType = {
             data = await response.json()
         
         }
-        console.log("__FETCH_RESPONSE___", data)
+
         dispatch({ type: actions.FETCH_DEVICE_IDS, payload:data });
 
       } catch (error) {
@@ -93,7 +93,7 @@ const InitialState: DeviceInitialType = {
             data = await response.json()
         
         }
-        
+
         dispatch({ type: actions.FETCH_DEVICE_ITEM, payload:data });
 
       } catch (error) {
